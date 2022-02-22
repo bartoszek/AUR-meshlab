@@ -1,7 +1,7 @@
 #!/hint/bash
 # Maintainer : bartus <arch-user-repoᘓbartus.33mail.com>
 pkgname=meshlab
-pkgver=2021.07
+pkgver=2021.10
 _pkgver_vcg=${pkgver}
 pkgrel=1
 pkgdesc="System for processing and editing of unstructured 3D models arising in 3D scanning (qt5 version)"
