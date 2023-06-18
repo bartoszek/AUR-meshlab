@@ -14,7 +14,7 @@
 pkgname=meshlab
 pkgver=2022.02
 _pkgver_vcg=${pkgver}
-pkgrel=2
+pkgrel=3
 pkgdesc="System for processing and editing of unstructured 3D models arising in 3D scanning (qt5 version)"
 arch=('i686' 'x86_64')
 url="https://www.meshlab.net"
@@ -30,14 +30,18 @@ optdepends=('u3d: for U3D and IDTF file support'
 #also create openctm(aur) jhead-lib structuresynth-lib to handle last dep
 source=("$pkgname::git+https://github.com/cnr-isti-vclab/meshlab.git#tag=MeshLab-${pkgver}"
         "vcglib::git+https://github.com/cnr-isti-vclab/vcglib.git#tag=${_pkgver_vcg}"
+        'add_cstdint_header.patch'
         )
 sha256sums=('SKIP'
             'SKIP'
+            '3c31fd894778b60202be998262fb95c799194f8b246b7b44344243675a79c246'
             'SKIP'
             'SKIP')
 
 prepare() {
   prepare_submodule
+  cd "${srcdir}/meshlab"
+  patch -p0 -i "$srcdir/add_cstdint_header.patch"
 }
 
 

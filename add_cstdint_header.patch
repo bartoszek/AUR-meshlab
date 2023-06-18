@@ -1,0 +1,25 @@
+--- src/external/nexus/src/corto/src/tunstall.cpp
++++ src/external/nexus/src/corto/src/tunstall.cpp
+
+@@ -19,7 +19,8 @@
+ #include <assert.h>
+ #include <math.h>
+ #include <string.h>
++#include <cstdint>
+ #include <deque>
+ #include <algorithm>
+ #include <iostream>
+ #include "tunstall.h"
+
+--- src/external/e57/include/E57Format.h
++++ src/external/e57/include/E57Format.h
+
+@@ -32,7 +32,8 @@
+ //! @file  E57Format.h header file for the E57 API
+ 
+ #include <cfloat>
++#include <cstdint>
+ #include <memory>
+ #include <vector>
+ 
+ #include "E57Exception.h"
