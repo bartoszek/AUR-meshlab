@@ -54,6 +54,7 @@ build() {
                   '-DCMAKE_BUILD_TYPE=Release'
                   '-DCMAKE_C_COMPILER=gcc'
                   '-DCMAKE_CXX_COMPILER=g++'
+                  '-DCMAKE_POLICY_VERSION_MINIMUM=3.5'
                 )
   cmake "${_cmake_flags[@]}" -G Ninja -B "${srcdir}/build" -S "${srcdir}/meshlab"
 # shellcheck disable=SC2046 # allow MAKEFLAGS to split when passing multiple flags.
